@@ -1,0 +1,25 @@
+{
+  "name": "codegen-graphql-zod",
+  "version": "1.0.0",
+  "description": "Its a library to parse from Graphql Schema to a Zod Schema",
+  "main": "./dist/index.js",
+  "homepage": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "tsc && graphql-codegen"
+  },
+  "keywords": [],
+  "author": "befish",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.20.1",
+    "@types/isomorphic-form-data": "^2.0.0",
+    "@types/ws": "^7.4.0",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}

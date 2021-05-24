@@ -1,0 +1,13 @@
+overwrite: true
+schema: './result.graphql'
+generates:
+  schemas.ts:
+    plugins:
+      - ./dist/index.js:
+          defaultRequiredMessage: 'This field have generic message'
+          onlyWithConstrain: false
+          zodTypesMap:
+            EmailAddress: string().email()
+            DateTime: string()
+            JSON: object()
+            Date: string()

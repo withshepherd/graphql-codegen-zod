@@ -1,0 +1,32 @@
+directive @constraint(
+  pattern: String
+  min: Int
+  max: Int
+  requiredMessage: String
+  typeOf: String
+) on INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION
+
+enum TestEnum {
+  ENUM1
+  ENUM2
+}
+
+input TestInput {
+  something: String!
+  enum: TestEnum
+  email: EmailAddress!
+  enumArray: [TestEnum]
+  emailArray: [EmailAddress]
+}
+
+input RegisterAddressInput {
+  postalCode: TestInput! @constraint(requiredMessage: "It field is have custom message.")
+  state: [String]!
+  city: String!
+  someNumber: Int @constraint(min: 10, max: 20, requiredMessage: "It field is have custom message.")
+  someNumberFloat: Float @constraint(min: 10.50, max: 20.50)
+  someBoolean: Boolean
+  line2: String @constraint(min: 10, max: 20)
+}
+
+scalar EmailAddress
