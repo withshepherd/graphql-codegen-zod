@@ -1,6 +1,6 @@
-# GRAPHQL SCHEMA TO zod SCHEMA
+# GRAPHQL SCHEMA TO ZOD SCHEMA
 
-The reason for this project is to maintain a single source of truth, between graphql and zod.
+The reason for this project is to maintain a single source of truth, between graphql and zod. Inspired by https://github.com/tinezmatias/codegen-graphql-yup
 
 ## Configs
 
@@ -13,7 +13,7 @@ You can use this pluggin de dos formas distintas
 
 If you only want to validate the required fields, what you can do is use the plugin in the following way
 
-```
+```yaml
 generates:
   schemas.ts:
     plugins:
@@ -31,7 +31,7 @@ this is because in graphql instrospection we dont have access to directives
 2. Generate a file, the result of merge of all schemas.
    Example:
 
-   ```
+   ```ts
    import path from 'path';
    import fs from 'fs';
    const mergeGraphqlSchemas = require('merge-graphql-schemas');
@@ -54,7 +54,7 @@ this is because in graphql instrospection we dont have access to directives
 
 ### Directive Schema
 
-```
+```graphql
 directive @constraint(
   pattern: String
   min: Int
@@ -68,7 +68,7 @@ directive @constraint(
 
 result.graphql
 
-```
+```graphql
 directive @constraint(
   pattern: String
   min: Int
@@ -95,7 +95,7 @@ input RegisterAddressInput {
 
 codegen.yml
 
-```
+```yaml
 overwrite: true
 schema: "./result.graphql"
 generates:
@@ -109,7 +109,7 @@ generates:
 
 schemas.ts ( THE RESULT )
 
-```
+```ts
 import {z} from 'zod'
 
 export const TestInputSchema = zod.object().shape({
@@ -128,53 +128,3 @@ export const RegisterAddressInputSchema = zod.object().shape({
 
 ```
 
-## COLABORATE
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-You will need to install:
-
-```
-Node
-```
-
-```
-npm
-```
-
-```
-type script
-```
-
-You will need to have:
-
-```
-an schema from graphql. or use the default.
-```
-
-### Installing
-
-The steps to use this pluggin are:
-
-```
-Clone the project
-```
-
-```
-npm install
-```
-
-```
-npm run generate
-```
-
-## Author
-
-- **Matias Martinez**
-- **BeFish**
-- **Nemac**
-# codegen-graphql-zod
