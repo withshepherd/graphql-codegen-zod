@@ -4,8 +4,7 @@ generates:
   schemas.ts:
     plugins:
       - ./dist/index.js:
-          defaultRequiredMessage: 'This field have generic message'
-          onlyWithConstrain: false
+          onlyWithValidation: false
           zodTypesMap:
             EmailAddress: string().email()
             DateTime: string()

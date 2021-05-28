@@ -21,7 +21,7 @@ export interface IHandled {
 
 export interface IConfig {
   defaultRequiredMessage?: string;
-  onlyWithConstrain?: Boolean;
+  onlyWithValidation?: Boolean;
   zodTypesMap: { [key: string]: string };
 }
 

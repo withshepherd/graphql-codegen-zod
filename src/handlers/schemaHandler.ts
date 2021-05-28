@@ -15,7 +15,7 @@ const schemaHandler = (schema: GraphQLSchema, config: IConfig) => {
   visit(astNode, {
     leave: {
       InputObjectTypeDefinition: (node) => {
-        let hasValidation = Boolean(!config.onlyWithConstrain);
+        let hasValidation = Boolean(!config.onlyWithValidation);
         if (!hasValidation) {
           node.fields?.forEach((field: InputValueDefinitionNode) => {
             const validation = field.directives?.find(
