@@ -1,4 +1,4 @@
-directive @constraint(
+directive @validation(
   pattern: String
   min: Int
   max: Int
@@ -12,21 +12,26 @@ enum TestEnum {
 }
 
 input TestInput {
-  something: String!
+  string: String
+  stringRequired: String!
   enum: TestEnum
-  email: EmailAddress!
+  enumRequired: TestEnum!
+  scalar: EmailAddress
+  scalarRequired: EmailAddress!
   enumArray: [TestEnum]
+  enumArrayRequired: [TestEnum]!
   emailArray: [EmailAddress]
+  emailArrayRequired: [EmailAddress]!
 }
 
 input RegisterAddressInput {
-  postalCode: TestInput! @constraint(requiredMessage: "It field is have custom message.")
+  postalCode: TestInput!
   state: [String]!
   city: String!
-  someNumber: Int @constraint(min: 10, max: 20, requiredMessage: "It field is have custom message.")
-  someNumberFloat: Float @constraint(min: 10.50, max: 20.50)
+  someNumber: Int @validation(min: 10, max: 20)
+  someNumberFloat: Float @validation(min: 10.50, max: 20.50)
   someBoolean: Boolean
-  line2: String @constraint(min: 10, max: 20)
+  line2: String @validation(min: 10, max: 20)
 }
 
 scalar EmailAddress

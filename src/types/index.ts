@@ -10,6 +10,9 @@ export interface INodes {
 export interface IEnums {
   [key: string]: string[];
 }
+export interface IScalars {
+  [key: string]: string;
+}
 
 export interface IHandled {
   nodes: INodes[];

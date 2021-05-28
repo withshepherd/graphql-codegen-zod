@@ -1,7 +1,6 @@
-import { IConfig, IHandled } from '../../types';
 import { isBoolean, isNumber, isRef, isString } from '../../utils/typesCheckers';
 
-const fieldNamedTypeHandler = (type: string, config: IConfig, handled: IHandled) => {
+const fieldNamedTypeHandler = (type: string) => {
   let result = 'z.';
 
   if (isRef(type)) {
@@ -12,8 +11,6 @@ const fieldNamedTypeHandler = (type: string, config: IConfig, handled: IHandled)
     result = result + 'string()';
   } else if (isNumber(type)) {
     result = result + 'number()';
-  } else if (config.zodTypesMap[type]) {
-    result = result + config.zodTypesMap[type];
   } else {
     // Assume it's a defined schema!
     result = type + 'Schema';

@@ -1,1 +1,1 @@
-export const DIRECTIVE_NAME = 'constraint'
+export const DIRECTIVE_NAME = 'validation';

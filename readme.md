@@ -55,7 +55,7 @@ this is because in graphql instrospection we dont have access to directives
 ### Directive Schema
 
 ```graphql
-directive @constraint(
+directive @validation(
   pattern: String
   min: Int
   max: Int
@@ -69,7 +69,7 @@ directive @constraint(
 result.graphql
 
 ```graphql
-directive @constraint(
+directive @validation(
   pattern: String
   min: Int
   max: Int
@@ -82,13 +82,13 @@ input TestInput {
 }
 
 input RegisterAddressInput {
-  postalCode: TestInput! @constraint(requiredMessage: "It field have custom message.")
+  postalCode: TestInput! @validation(requiredMessage: "It field have custom message.")
   state: [String]!
   city: String!
-  someNumber: Int @constraint(min: 10, max: 20)
-  someNumberFloat: Float @constraint(min: 10.50, max: 20.50)
+  someNumber: Int @validation(min: 10, max: 20)
+  someNumberFloat: Float @validation(min: 10.50, max: 20.50)
   someBoolean: Boolean
-  line2: String @constraint(min: 10, max: 20)
+  line2: String @validation(min: 10, max: 20)
 }
 
 ```

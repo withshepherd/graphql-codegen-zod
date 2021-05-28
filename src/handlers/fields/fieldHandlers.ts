@@ -1,28 +1,26 @@
 import { InputValueDefinitionNode } from 'graphql';
-import { IConfig, IHandled } from '../../types';
+import { IConfig } from '../../types';
 import directiveHandler from '../directives/index';
 import fieldKindHandler from './kindsHandler';
 
-const fieldHandler = (field: InputValueDefinitionNode, config: IConfig, handled: IHandled) => {
+const fieldHandler = (field: InputValueDefinitionNode, config: IConfig) => {
   const fieldName = field.name.value;
   const fieldType = field.type;
 
-  const { extraValidations, requiredMessage } = directiveHandler(field.directives);
-
-  const reqMessage = requiredMessage || config.defaultRequiredMessage || '';
-  let arg = fieldKindHandler(fieldType, config, handled);
+  const { extraValidations } = directiveHandler(field.directives);
+  let extra = '';
 
   for (const key in extraValidations) {
     if (Object.prototype.hasOwnProperty.call(extraValidations, key)) {
       const value = extraValidations[key];
       if (typeof value === 'string') {
-        arg = `${arg}.${key}('${value}')`;
+        extra = `${extra}.${key}('${value}')`;
       } else {
-        arg = `${arg}.${key}(${value})`;
+        extra = `${extra}.${key}(${value})`;
       }
     }
   }
-  return `${fieldName}: ${arg}`;
+  return `${fieldName}: ${fieldKindHandler(fieldType, extra)}`;
 };
 
 export default fieldHandler;

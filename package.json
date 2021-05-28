@@ -20,6 +20,7 @@
     "@types/isomorphic-form-data": "^2.0.0",
     "@types/ws": "^7.4.0",
     "ts-node-dev": "^1.1.1",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "zod": "^3.1.0"
   }
 }
