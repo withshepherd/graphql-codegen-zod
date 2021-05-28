@@ -1,7 +1,7 @@
 import { GraphQLSchema, InputValueDefinitionNode, parse, visit } from 'graphql';
 import { printSchemaWithDirectives } from 'graphql-tools';
-import { IEnums, INodes } from '../../types/index';
-import { DIRECTIVE_NAME } from '../../utils/constants';
+import { IEnums, INodes } from '../types/index';
+import { DIRECTIVE_NAME } from '../utils/constants';
 
 const schemaHandler = (schema: GraphQLSchema, onlyWithConstrain?: Boolean) => {
   const printedSchema = printSchemaWithDirectives(schema);

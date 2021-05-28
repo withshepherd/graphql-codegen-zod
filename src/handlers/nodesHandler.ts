@@ -1,5 +1,5 @@
-import { IConfig, IHandled } from '../../types/index';
-import fieldsHandler from '../fields';
+import { IConfig, IHandled } from '../types/index';
+import fieldsHandler from './fields';
 
 const nodesHandler = (handled: IHandled, config: IConfig) => {
   return handled.nodes

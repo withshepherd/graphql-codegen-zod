@@ -24,24 +24,18 @@ const fieldKindHandler = (type: NamedTypeNode | TypeNode, config: IConfig, handl
       config,
       handled,
     )}`;
+    //   @ts-expect-error
+  } else if (type.kind && type.type) {
+    result = `${fieldKindHandler(
+      // @ts-expect-error
+      type.type,
+      config,
+      handled,
+    )}.optional()`;
   }
-
-  //   else if (type.kind && type.type) {
-  //     result = `${fieldKindHandler(
-  //       // @ts-expect-error
-  //       type.type,
-  //       config,
-  //     )}.optional()`;
-  //   }
 
   if (isType(type.kind) && isNamed(type)) {
     result = fieldNamedTypeHandler(type.name.value, config, handled);
-  }
-
-  //   @ts-expect-error
-  if (handled.enums[type?.name?.value]) {
-    //   @ts-expect-error
-    result = `z.enum([${JSON.stringify(handled.enums[type.name?.value])}])`;
   }
 
   return result;

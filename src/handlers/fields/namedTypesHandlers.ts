@@ -14,6 +14,9 @@ const fieldNamedTypeHandler = (type: string, config: IConfig, handled: IHandled)
     result = result + 'number()';
   } else if (config.zodTypesMap[type]) {
     result = result + config.zodTypesMap[type];
+  } else {
+    // Assume it's a defined schema!
+    result = type + 'Schema';
   }
 
   return result;

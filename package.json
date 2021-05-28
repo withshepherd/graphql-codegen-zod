@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Its a library to parse from Graphql Schema to a Zod Schema",
   "main": "./dist/index.js",
-  "homepage": "",
+  "homepage": "https://github.com/mmahalwy/codegen-graphql-zod",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "tsc && graphql-codegen"
   },
   "keywords": [],
-  "author": "befish",
+  "author": "mmahalwy",
   "license": "ISC",
   "dependencies": {
     "graphql": "^15.5.0",
