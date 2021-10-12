@@ -4,8 +4,9 @@
   "description": "Its a library to parse from Graphql Schema to a Zod Schema",
   "homepage": "https://github.com/mmahalwy/codegen-graphql-zod",
   "scripts": {
-    "test": "yarn generate",
-    "generate": "rm -rf dist/ && tsc && graphql-codegen"
+    "test": "rm -rf dist/ && tsc && graphql-codegen",
+    "build": "tsc",
+    "prepublish": "yarn build"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
