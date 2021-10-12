@@ -1,10 +1,6 @@
 {
   "name": "graphql-codegen-zod",
-<<<<<<< HEAD
   "version": "1.6.2",
-=======
-  "version": "1.5.0",
->>>>>>> 0d44774 (fix: make graphql dev)
   "description": "Its a library to parse from Graphql Schema to a Zod Schema",
   "scripts": {
     "test": "rm -rf dist/ && tsc && graphql-codegen",
