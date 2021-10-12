@@ -21,8 +21,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
-          # Defaults to the user or organization that owns the workflow file
-          scope: '@withshepherd'
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn
         if: ${{ steps.release.outputs.release_created }}
