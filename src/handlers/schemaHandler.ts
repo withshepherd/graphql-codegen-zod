@@ -1,5 +1,5 @@
+import { printSchemaWithDirectives } from '@graphql-tools/utils';
 import { GraphQLSchema, InputValueDefinitionNode, parse, visit } from 'graphql';
-import { printSchemaWithDirectives } from 'graphql-tools';
 import { IConfig, IEnums, INodes, IScalars } from '../types/index';
 import { DIRECTIVE_NAME } from '../utils/constants';
 
