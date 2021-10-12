@@ -7,6 +7,9 @@
     "test": "yarn generate",
     "generate": "rm -rf dist/ && tsc && graphql-codegen"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [],
   "author": "withshepherd",
   "license": "ISC",
