@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.5.0...v1.6.0) (2021-10-12)
+
+
+### Features
+
+* bump ([dd7f6c3](https://www.github.com/withshepherd/graphql-codegen-zod/commit/dd7f6c3552bb0d3234445429dc496212dfff2d53))
+
 ## [1.5.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.4.1...v1.5.0) (2021-10-12)
 
 
