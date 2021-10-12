@@ -15,7 +15,7 @@ If you only want to validate the required fields, what you can do is use the plu
 generates:
   schemas.ts:
     plugins:
-      - codegen-graphql-zod
+      - graphql-codegen-zod
 ```
 
 ### Full Use
@@ -76,7 +76,7 @@ schema: "./result.graphql"
 generates:
   schemas.ts:
     plugins:
-      - codegen-graphql-zod:
+      - graphql-codegen-zod:
           onlyWithValidation: false
 
 ```
