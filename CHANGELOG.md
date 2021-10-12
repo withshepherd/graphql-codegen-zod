@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/withshepherd/codegen-graphql-zod/compare/v1.1.0...v1.2.0) (2021-10-12)
+
+
+### Features
+
+* add package repo ([612d8cb](https://www.github.com/withshepherd/codegen-graphql-zod/commit/612d8cb6eb9daa316abbb9374635f0883c038388))
+
 ## [1.1.0](https://www.github.com/withshepherd/codegen-graphql-zod/compare/v1.0.0...v1.1.0) (2021-10-12)
 
 
