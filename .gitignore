@@ -3,3 +3,5 @@ dist
 .npmignore
 schemas.ts
 package-lock.json
+
+yarn-error.log
