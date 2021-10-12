@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/withshepherd/codegen-graphql-zod/compare/v1.3.0...v1.4.0) (2021-10-12)
+
+
+### Features
+
+* remove some things ([e8aa4fc](https://www.github.com/withshepherd/codegen-graphql-zod/commit/e8aa4fc8cf0c927ba162b9826cfbd35954235aa8))
+
 ## [1.3.0](https://www.github.com/withshepherd/codegen-graphql-zod/compare/v1.2.0...v1.3.0) (2021-10-12)
 
 

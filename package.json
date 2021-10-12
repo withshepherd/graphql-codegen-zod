@@ -1,6 +1,6 @@
 {
   "name": "@withshepherd/codegen-graphql-zod",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Its a library to parse from Graphql Schema to a Zod Schema",
   "scripts": {
     "test": "rm -rf dist/ && tsc && graphql-codegen",
