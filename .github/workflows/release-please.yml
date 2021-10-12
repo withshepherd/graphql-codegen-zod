@@ -21,7 +21,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@withshepherd'
         if: ${{ steps.release.outputs.release_created }}
@@ -29,5 +28,5 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
