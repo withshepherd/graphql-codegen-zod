@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.2](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.6.1...v1.6.2) (2021-10-12)
+
+
+### Bug Fixes
+
+* token ([0010108](https://www.github.com/withshepherd/graphql-codegen-zod/commit/001010802ee52e661016f332ddf5578c7965a9b7))
+
 ### [1.6.1](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.6.0...v1.6.1) (2021-10-12)
 
 
