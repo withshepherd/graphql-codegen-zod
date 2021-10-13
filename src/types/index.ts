@@ -23,6 +23,7 @@ export interface IConfig {
   defaultRequiredMessage?: string;
   onlyWithValidation?: Boolean;
   zodTypesMap: { [key: string]: string };
+  lazy?: boolean;
 }
 
 export const isNamed = (type: NamedTypeNode | TypeNode): type is NamedTypeNode => {
