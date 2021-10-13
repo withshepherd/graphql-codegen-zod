@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.7.0...v1.8.0) (2021-10-13)
+
+
+### Features
+
+* add nullish instead of optional ([162370f](https://www.github.com/withshepherd/graphql-codegen-zod/commit/162370fcc0660584f69b0ff0b084fb4bfcb06032))
+
 ## [1.7.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.6.3...v1.7.0) (2021-10-13)
 
 
