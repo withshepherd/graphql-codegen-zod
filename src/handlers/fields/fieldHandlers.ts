@@ -20,7 +20,12 @@ const fieldHandler = (field: InputValueDefinitionNode, config: IConfig) => {
       }
     }
   }
-  return `${fieldName}: ${fieldKindHandler(fieldType, extra)}`;
+  return `${fieldName}: ${fieldKindHandler({
+    fieldName,
+    type: fieldType,
+    extra,
+    isOptional: true,
+  })}`;
 };
 
 export default fieldHandler;

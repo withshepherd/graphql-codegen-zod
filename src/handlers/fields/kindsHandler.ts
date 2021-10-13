@@ -3,28 +3,42 @@ import { isNamed } from '../../types/index';
 import { isArray, isRequired, isType } from '../../utils/typesCheckers';
 import fieldNamedTypeHandler from './namedTypesHandlers';
 
-const fieldKindHandler = (type: NamedTypeNode | TypeNode, extra = '', isOptional = true) => {
+const fieldKindHandler = ({
+  fieldName,
+  type,
+  extra = '',
+  isOptional = true,
+}: {
+  fieldName: string;
+  type: NamedTypeNode | TypeNode;
+  extra: string;
+  isOptional: boolean;
+}) => {
   let result = '';
-
+  if (fieldName === 'arrayRequired') {
+    console.log({ fieldName, type, extra, isOptional });
+  }
   if (isRequired(type.kind)) {
-    result = `${fieldKindHandler(
+    result = `${fieldKindHandler({
       // @ts-expect-error
-      type.type,
+      type: type.type,
+      fieldName,
       extra,
-      false,
-    )}`;
+      isOptional: false,
+    })}`;
   }
 
   if (isArray(type.kind)) {
-    result = `z.array(${fieldKindHandler(
+    result = `z.array(${fieldKindHandler({
       // @ts-expect-error
-      type.type,
+      type: type.type,
+      fieldName,
       extra,
-      isOptional,
-    )})`;
+      isOptional: true,
+    })})`;
 
     if (isOptional) {
-      result = `z.optional(${result})`;
+      result = `${result}.nullish()`;
     }
   }
 
@@ -33,7 +47,7 @@ const fieldKindHandler = (type: NamedTypeNode | TypeNode, extra = '', isOptional
     result = `${result}${extra}`;
 
     if (isOptional) {
-      result = `z.optional(${result})`;
+      result = `${result}.nullish()`;
     }
   }
 

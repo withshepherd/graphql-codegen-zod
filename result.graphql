@@ -22,6 +22,12 @@ input TestInput {
   enumArrayRequired: [TestEnum]!
   emailArray: [EmailAddress]
   emailArrayRequired: [EmailAddress]!
+  emailRequiredArray: [EmailAddress!]
+  emailRequiredArrayRequired: [EmailAddress!]!
+  stringArray: [String]
+  stringArrayRequired: [String]!
+  stringRequiredArray: [String!]
+  stringRequiredArrayRequired: [String!]!
 }
 
 input RegisterAddressInput {
