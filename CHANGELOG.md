@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.6.3...v1.7.0) (2021-10-13)
+
+
+### Features
+
+* add lazy option ([1ea3ccc](https://www.github.com/withshepherd/graphql-codegen-zod/commit/1ea3cccd5fb7ccef2a8ca9c42d1ca13721e35bb8))
+
 ### [1.6.3](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.6.2...v1.6.3) (2021-10-12)
 
 
