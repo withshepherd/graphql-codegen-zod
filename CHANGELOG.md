@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.8.0...v1.9.0) (2021-10-22)
+
+
+### Features
+
+* allow adding type ([ed7af29](https://www.github.com/withshepherd/graphql-codegen-zod/commit/ed7af2911dfc60cb15e611b7f266bfa1fc807fb4))
+
 ## [1.8.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.7.0...v1.8.0) (2021-10-13)
 
 
