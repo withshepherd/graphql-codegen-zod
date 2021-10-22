@@ -17,7 +17,7 @@ const nodesHandler = (nodes: INodes[], config: IConfig, types: ITypes) => {
 
       return `${schemaName} = z.object({\n${fieldsZod}\n})`;
     })
-    .join(';\n\n');
+    .join(';\n\n\n');
 };
 
 export default nodesHandler;
