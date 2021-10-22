@@ -14,6 +14,10 @@ export interface IScalars {
   [key: string]: string;
 }
 
+export interface ITypes {
+  [key: string]: string;
+}
+
 export interface IHandled {
   nodes: INodes[];
   enums: IEnums;
@@ -22,6 +26,7 @@ export interface IHandled {
 export interface IConfig {
   defaultRequiredMessage?: string;
   onlyWithValidation?: Boolean;
+  zodSchemasMap: { [key: string]: string };
   zodTypesMap: { [key: string]: string };
   lazy?: boolean;
 }

@@ -5,8 +5,11 @@ generates:
     plugins:
       - ./dist/index.js:
           onlyWithValidation: false
+          zodSchemasMap:
+            EmailAddress: z.string().email()
+            DateTime: z.string()
+            JSON: z.object()
+            Date: z.string()
           zodTypesMap:
-            EmailAddress: string().email()
-            DateTime: string()
-            JSON: object()
-            Date: string()
+            EmailAddress: string
+            TestInput: any

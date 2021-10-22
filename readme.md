@@ -5,7 +5,7 @@ The reason for this project is to maintain a single source of truth, between gra
 ## Configs
 
 - onlyWithValidation: boolean ( default false) If you want to generate an schema for all your input objects definitions with or without the directive put it in true.
-- zodTypesMap: a map of your scalars to a zod type. This is useful for scalars such as EmailAddress that are `z.string().email()`
+- zodSchemasMap: a map of your scalars to a zod type. This is useful for scalars such as EmailAddress that are `z.string().email()`
 
 ### Simple use
 
