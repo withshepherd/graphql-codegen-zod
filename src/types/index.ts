@@ -29,6 +29,7 @@ export interface IConfig {
   zodSchemasMap: { [key: string]: string };
   zodTypesMap: { [key: string]: string };
   lazy?: boolean;
+  importOperationTypesFrom?: string;
 }
 
 export const isNamed = (type: NamedTypeNode | TypeNode): type is NamedTypeNode => {

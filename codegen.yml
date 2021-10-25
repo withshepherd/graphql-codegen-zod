@@ -3,13 +3,18 @@ schema: './result.graphql'
 generates:
   schemas.ts:
     plugins:
-      - ./dist/index.js:
-          onlyWithValidation: false
-          zodSchemasMap:
-            EmailAddress: z.string().email()
-            DateTime: z.string()
-            JSON: z.object()
-            Date: z.string()
-          zodTypesMap:
-            EmailAddress: string
-            TestInput: any
+      - typescript
+      - typescript-operations
+      - ./dist/index.js
+    config:
+      allowEnumStringTypes: true
+      onlyWithValidation: false
+      lazy: true
+      zodSchemasMap:
+        EmailAddress: z.string().email()
+        IPAddress: z.string()
+        DateTime: z.string()
+        JSON: z.object()
+        Date: z.string()
+      zodTypesMap:
+        EmailAddress: string
