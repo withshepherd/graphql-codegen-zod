@@ -9,6 +9,10 @@ const nodesHandler = (nodes: INodes[], config: IConfig, types: ITypes) => {
 
       if (types[name]) {
         schemaName += `: z.ZodSchema<${types[name]}>`;
+      } else if (config.importOperationTypesFrom) {
+        schemaName += `: z.ZodSchema<Types.${name}>`;
+      } else {
+        schemaName += `: z.ZodSchema<${name}>`;
       }
 
       if (config.lazy) {

@@ -37,7 +37,9 @@ input RegisterAddressInput {
   someNumber: Int @validation(min: 10, max: 20)
   someNumberFloat: Float @validation(min: 10.50, max: 20.50)
   someBoolean: Boolean
+  ipAddress: IPAddress
   line2: String @validation(min: 10, max: 20)
 }
 
 scalar EmailAddress
+scalar IPAddress
