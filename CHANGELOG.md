@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.2](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.1...v1.10.2) (2021-10-26)
+
+
+### Bug Fixes
+
+* scalars types ([b4af3d5](https://www.github.com/withshepherd/graphql-codegen-zod/commit/b4af3d52e6ea7484416e0b5a343a621f3a2599c9))
+
 ### [1.10.1](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.0...v1.10.1) (2021-10-26)
 
 
