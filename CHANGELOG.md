@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.9.0...v1.10.0) (2021-10-25)
+
+
+### Features
+
+* allow importing types ([ba2c591](https://www.github.com/withshepherd/graphql-codegen-zod/commit/ba2c59166753b8cdbed20071eb0750de7c710f74))
+
 ## [1.9.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.8.0...v1.9.0) (2021-10-22)
 
 
