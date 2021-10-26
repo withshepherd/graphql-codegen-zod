@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.1](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.0...v1.10.1) (2021-10-26)
+
+
+### Bug Fixes
+
+* types not working correctly ([0133b0f](https://www.github.com/withshepherd/graphql-codegen-zod/commit/0133b0f1d4dbede8677a4814581809a7f6aa8668))
+
 ## [1.10.0](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.9.0...v1.10.0) (2021-10-25)
 
 
