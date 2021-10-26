@@ -8,7 +8,7 @@ const enumsHandler = (enums: IEnums, types: ITypes, config: IConfig): string => 
       if (types[key]) {
         schemaName += `: z.ZodSchema<${types[key]}>`;
       } else if (config.importOperationTypesFrom) {
-        schemaName += `: z.ZodSchema<${['`', 'Types.${', key, '}`'].join('')}>`;
+        schemaName += `: z.ZodSchema<${['`', '${Types.', key, '}`'].join('')}>`;
       } else {
         schemaName += `: z.ZodSchema<${['`', '${', key, '}`'].join('')}>`;
       }

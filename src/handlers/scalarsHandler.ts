@@ -8,7 +8,7 @@ const scalarsHandler = (scalars: IScalars, types: ITypes, config: IConfig): stri
       if (types[key]) {
         schemaName += `: z.ZodSchema<${types[key]}>`;
       } else if (config.importOperationTypesFrom) {
-        schemaName += `: z.ZodSchema<Types.Scalars["${key}"]>`;
+        schemaName += `: z.ZodSchema<${['`', '${Types.', key, '}`'].join('')}>`;
       } else {
         schemaName += `: z.ZodSchema<Scalars["${key}"]>`;
       }

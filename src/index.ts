@@ -14,7 +14,7 @@ export const plugin = (schema: GraphQLSchema, documents: any, config: IConfig) =
   return [
     `import { z } from 'zod';`,
     config.importOperationTypesFrom
-      ? `import * as Types from '${config.importOperationTypesFrom}'`
+      ? `import type * as Types from '${config.importOperationTypesFrom}'`
       : '',
     parsedScalars,
     parsedEnums,
