@@ -38,7 +38,7 @@ const fieldKindHandler = ({
     })})`;
 
     if (isOptional) {
-      result = `${result}.nullable()`;
+      result = `${result}.nullish()`;
     }
   }
 
@@ -47,7 +47,7 @@ const fieldKindHandler = ({
     result = `${result}${extra}`;
 
     if (isOptional) {
-      result = `${result}.nullable()`;
+      result = `${result}.nullish()`;
     }
   }
 
