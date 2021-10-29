@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.3](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.2...v1.10.3) (2021-10-29)
+
+
+### Bug Fixes
+
+* nullable should be nullish ([06b3c90](https://www.github.com/withshepherd/graphql-codegen-zod/commit/06b3c90f6984dfb845095525381d9af63b7c0f61))
+
 ### [1.10.2](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.1...v1.10.2) (2021-10-26)
 
 
