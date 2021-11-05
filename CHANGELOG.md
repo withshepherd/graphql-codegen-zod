@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.4](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.3...v1.10.4) (2021-11-05)
+
+
+### Bug Fixes
+
+* remove schema from node ([b96a357](https://www.github.com/withshepherd/graphql-codegen-zod/commit/b96a3578d3b51fb6c3e970a888ea3aa7868e0c94))
+
 ### [1.10.3](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.2...v1.10.3) (2021-10-29)
 
 
