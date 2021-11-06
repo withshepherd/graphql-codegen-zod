@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.5](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.4...v1.10.5) (2021-11-06)
+
+
+### Bug Fixes
+
+* remove schema from enums and scalars ([f4ef98e](https://www.github.com/withshepherd/graphql-codegen-zod/commit/f4ef98e9c640d585f8177e570f2ab7902774cbad))
+
 ### [1.10.4](https://www.github.com/withshepherd/graphql-codegen-zod/compare/v1.10.3...v1.10.4) (2021-11-05)
 
 
