@@ -7,13 +7,13 @@ const nodesHandler = (nodes: INodes[], config: IConfig, types: ITypes) => {
       const fieldsZod = fieldsHandler(fields, config);
       let schemaName = `export const ${name}Schema`;
 
-      // if (types[name]) {
-      //   schemaName += `: z.ZodSchema<${types[name]}>`;
-      // } else if (config.importOperationTypesFrom) {
-      //   schemaName += `: z.ZodSchema<Types.${name}>`;
-      // } else {
-      //   schemaName += `: z.ZodSchema<${name}>`;
-      // }
+      if (types[name]) {
+        schemaName += `: z.ZodSchema<${types[name]}>`;
+        // } else if (config.importOperationTypesFrom) {
+        //   schemaName += `: z.ZodSchema<Types.${name}>`;
+        // } else {
+        //   schemaName += `: z.ZodSchema<${name}>`;
+      }
 
       if (config.lazy) {
         return `${schemaName} = z.lazy(() => z.object({\n${fieldsZod}\n}))`;
