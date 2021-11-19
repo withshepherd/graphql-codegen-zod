@@ -23,7 +23,7 @@
     "@graphql-codegen/typescript": "^2.2.4",
     "@graphql-codegen/typescript-operations": "^2.1.8",
     "@types/isomorphic-form-data": "^2.0.0",
-    "@types/ws": "^7.4.0",
+    "@types/ws": "7.4.7",
     "graphql": "^15.6.1",
     "install-peerdeps": "^3.0.3",
     "ts-node-dev": "^1.1.1",
